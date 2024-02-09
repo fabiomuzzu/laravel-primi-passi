@@ -8,13 +8,45 @@
     <title>Students #113</title>
 </head>
 <body>
+    {{-- HEADER --}}
+    <header>
+        <nav class="navbar navbar-expand" style="background-color: #e3f2fd;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ route('homepage') }}">Boolean Class #113</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Documents</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ route('students') }}">About Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
     
     {{-- MAIN --}}
     <main>
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti omnis ipsum nemo quasi velit reprehenderit tempore! Molestiae ea natus, quisquam molestias modi accusamus sequi deserunt, nemo similique totam expedita fugit.
+                    <h3 class="text-center ">{{$class}}</h3>
+                    <ul>
+                        @foreach ($students as $student)
+                        <li>
+                            {{$student}}
+                        </li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>

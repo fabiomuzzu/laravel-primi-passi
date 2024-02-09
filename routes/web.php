@@ -20,5 +20,9 @@ Route::get('/', function () {
 })->name('homepage');
 
 Route::get('/about_us', function () {
-    return view('students');
+    $class = 'La classe #113 è composta da:';
+    $students = [
+        'Agostino Rossi', 'Mario Agazzi', 'Luisa Mari', 'Antonio Monti'
+    ];
+    return view('students', compact('class','students'));
 })->name('students');
