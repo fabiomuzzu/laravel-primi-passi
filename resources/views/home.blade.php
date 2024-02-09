@@ -8,12 +8,12 @@
     <title>Laravel Hello World</title>
 </head>
 <body>
-    
+
     {{-- HEADER --}}
     <header>
         <nav class="navbar navbar-expand" style="background-color: #e3f2fd;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Boolean Class #113</a>
+                <a class="navbar-brand" href="{{ route('homepage') }}">Boolean Class #113</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -23,7 +23,7 @@
                             <a class="nav-link active" href="#">Documents</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">About Us</a>
+                            <a class="nav-link active" href="{{ route('students') }}">About Us</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">

@@ -17,4 +17,8 @@ Route::get('/', function () {
     $welcome = 'Hello World!';
 
     return view('home', compact('welcome'));
-});
+})->name('homepage');
+
+Route::get('/about_us', function () {
+    return view('students');
+})->name('students');
