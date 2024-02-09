@@ -26,3 +26,9 @@ Route::get('/about_us', function () {
     ];
     return view('students', compact('class','students'));
 })->name('students');
+
+Route::get('/files', function () {
+    $documents = 'In futuro i documenti verranno aggiunti in questa sezione:';
+
+    return view('documents', compact('documents'));
+})->name('documents');
